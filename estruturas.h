@@ -38,3 +38,7 @@ int *Bubble_Sort(int *vetor, int tamanho);
 // o método Selection Sort
 int *Selection_Sort(int *vetor, int tamanho);
 
+// Inserctio_Sort
+// Função para ordenar os dados de um vetor de inteiros usando
+// o método Inserctio Sort
+int *Insertion_Sort(int *vetor, int tamanho);

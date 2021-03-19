@@ -19,7 +19,7 @@ int Menor_Valor(int *vetor, int tamanho)
 
 // Posicao_Menor
 int Posicao_Menor_Valor(int *vetor, int inicio, int tamanho)
-{    
+{
     int menor = vetor[inicio];
     for (int i = inicio + 1; i < tamanho; i++)
     {
@@ -90,6 +90,23 @@ int *Selection_Sort(int *vetor, int tamanho)
         aux = vetor[i];
         vetor[i] = vetor[indice];
         vetor[indice] = aux;
+    }
+    return vetor;
+}
+
+// Inserction_Sort
+int *Insertion_Sort(int *vetor, int tamanho)
+{
+    int j;
+    int aux;
+    for (int i = 1; i < tamanho; i++)
+    {
+        aux = vetor[i];
+        for (j = i; (j > 0 && (aux < vetor[j - 1])); j--)
+        {
+            vetor[j] = vetor[j-1];
+        }
+        vetor[j] = aux;
     }
     return vetor;
 }
